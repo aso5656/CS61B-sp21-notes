@@ -186,7 +186,7 @@ public class DLList {
 
     public void removeLast() {
         sentinel.prev = sentinel.prev.prev;
-        sentinel.prev.next = null;
+        sentinel.prev.next = sentinel;
         size --;
     }
     public int size() {
