@@ -233,3 +233,25 @@ public class DLList<TypeHolder> {
 //Instantiation of a new DDList, only 
 DLList<String> s1 = new DLList<>("first");
 ```
+
+## Arrays
+Arrays are apecial kind of object which consists of a numbered sequence of memory boxes.
+- A fixed integer length that cannot change (shrunk or expanded)
+- All of boxes bold the same type of value
+- Get one reference when its created
+- arrays do not have methods (membership)
+  
+```java
+y = new int[3]; //Creates array containing 3 int boxes(32 * 3 bits total). Each contains a default value.
+x = new int[]{1, 2, 3, 4, 5};
+int[] w = {2, 4, 6, 8};
+```
+
+System.arraycopy(source_array,starting_position,target_array,starting_pos_in_target,nums_to_copy);
+System.arraycopy(b,0,x,3,2);
+(In Python): `x[3:5] = b[0:2]`
+
+## 2D Arrays
+
+## Arrays vs. Classes
+
