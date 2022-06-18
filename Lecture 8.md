@@ -96,3 +96,15 @@ a.praise(d); //cool animal  call Animal.praise(d)
 
 **When you are creating these hierarchies, remember that the relationship between a subclass and a superclass should be an "is-a" relationship.**
 Cat should only implement Animal Cat is an Animal. You should not be defining them using a "has-a" relationship. Cat has-a Claw, but Cat definitely should not be implementing Claw.
+
+### Implementation Inheritance Cheetsheet
+#### Extends
+- Inherits all public variables, methods, nested classes
+- Not constructors
+- Subclass constructor must invoke superclass constructor first
+- Use super to invoke overriden superclass methods and constructors
+  
+#### Invocation of overriden methods follows
+1. Compiler only lets us do things allowd by static type.
+2. For overriden methods (not overloaded methods) the actual method invoked is based on dynamic type of invoking expression.
+- Can use casting to overrule compiler type checking
