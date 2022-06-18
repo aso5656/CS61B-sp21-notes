@@ -140,7 +140,22 @@ Malamute frankSr = new Malamute("FrankSr", 100);
 Poodle largerPoodle = (Poodle) maxDog(frank, frankJr);  //runtime exception - a ClassCastException. We try casting a Malamute as a Poodle
 
 ```
+#### Dynamic Method Selection and Casting Puzzle
 
+```java
+public class Bird {
+	public void gulgate(Bird b) {
+    	System.out.println("BiGulBi"); }}
+
+public class Falcon extends Bird {
+	public void gulgate(Falcon f) { //overloaded, not overriden
+    	System.out.println("FaGulFa");}}
+
+Bird bird = new Falcon(); //Static type Bird, Dynamic type Falcon
+Falcon falcon = (Falcon) bird; //Static type Falcon, Dynamic type Falcon
+bird.gulgate(falcon); //"BiGulBi" 
+falcon.gulgate(falcon); //"FaGulFa" 
+```
 
 #### Typing Puzzle
 
